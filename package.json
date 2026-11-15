@@ -1,0 +1,58 @@
+{
+  "name": "novigapi",
+  "version": "0.1.0",
+  "description": "TypeScript client for novigapi.com, a read-only Novig market data API, plus devig helpers. Independent; not affiliated with Novig.",
+  "license": "MIT",
+  "author": "Stunning Couches LLC",
+  "homepage": "https://novigapi.com/novig-api-javascript",
+  "keywords": [
+    "novig",
+    "odds",
+    "devig",
+    "no-vig",
+    "prediction-market",
+    "sports-data",
+    "closing-line-value"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "example:devig": "tsx examples/devig-board.ts",
+    "example:arb": "tsx examples/arb-scanner.ts",
+    "example:clv": "tsx examples/clv-backtest.ts",
+    "test": "tsx --test test/client.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0",
+    "tsx": "^4.19.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novigapi/novigapi-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/novigapi/novigapi-js/issues"
+  }
+}
