@@ -1,5 +1,7 @@
 # novigapi (TypeScript / JavaScript)
 
+[![npm](https://img.shields.io/npm/v/novigapi.svg)](https://www.npmjs.com/package/novigapi)
+
 A small TypeScript client for [novigapi.com](https://novigapi.com), a read-only Novig market data API, plus devig helpers and three runnable examples. It uses the global `fetch`, so it runs on Node 18+, Deno, Bun and in browsers. No runtime dependencies.
 
 Novig has an official trading API and free daily CSVs. novigapi.com is the read-only data layer on top: no account, names resolved, intraday line history, fair prices and alerts. To place orders or read a Novig account, use the official Novig API documented at [docs.novig.com](https://docs.novig.com).
@@ -11,8 +13,6 @@ Independent. Not affiliated with, endorsed by or sponsored by Novig.
 ```bash
 npm install novigapi
 ```
-
-Not on npm yet: the name `novigapi` was free on 15 Nov 2026 and the package is ready to publish (see OFFSITE-HANDOFF.md in the novigapi.com repository). Until then, build from source: `npm install && npm run build`, then `npm install /path/to/novigapi-js`.
 
 Tests use an injected fetch and need no key or network: `npm test`.
 
